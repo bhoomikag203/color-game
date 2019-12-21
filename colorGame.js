@@ -7,7 +7,23 @@ var colors = ["rgb(255, 0, 0)",
 ]
 
 var squares = document.querySelectorAll(".square");
+var pickedColor = colors[3];
+var colorDisplay = document.querySelector("#colorDisplay");
+colorDisplay.textContent = pickedColor;
 
 for (i = 0; i < squares.length; i++) {
+    //add initial colors
     squares[i].style.backgroundColor = colors[i];
+
+    //add click listeners to squares 
+    squares[i].addEventListener("click", function() {
+        //grab color of clicked square
+        var clickedColor = this.style.backgroundColor;
+        //compare color to pickedColor
+        if (clickedColor === pickedColor) {
+            alert("CORRECT!");
+        } else {
+            alert("WRONG!");
+        }
+    });
 }
