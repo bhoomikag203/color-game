@@ -5,6 +5,18 @@ var pickedColor = pickColor();
 var colorDisplay = document.querySelector("#colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var resetButton = document.querySelector("#reset");
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector("#hardBtn");
+
+easyBtn.addEventListener("click", function() {
+    hardBtn.classList.remove("selected");
+    easyBtn.classList.add("selected");
+});
+
+hardBtn.addEventListener("click", function() {
+    easyBtn.classList.remove("selected")
+    hardBtn.classList.add("selected");
+});
 
 resetButton.addEventListener("click", function() {
     //generate all new colors
@@ -18,7 +30,8 @@ resetButton.addEventListener("click", function() {
         squares[i].style.backgroundColor = colors[i];
     }
     h1.style.backgroundColor = "#232323";
-})
+});
+
 colorDisplay.textContent = pickedColor;
 
 for (var i = 0; i < squares.length; i++) {
