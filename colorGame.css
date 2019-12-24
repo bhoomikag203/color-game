@@ -35,9 +35,31 @@ h1 {
 }
 
 .selected {
-    background-color: blue;
+    color: white;
+    background-color: steelblue;
 }
 
 #colorDisplay {
     font-size: 200%;
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+}
+
+button {
+    border: none;
+    font-family: "Montserrat", "Averin";
+    text-transform: uppercase;
+    height: 100%;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+}
+
+button:hover {
+    color: white;
+    background-color: steelblue;
 }
