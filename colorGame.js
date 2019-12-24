@@ -40,17 +40,23 @@ hardBtn.addEventListener("click", function() {
 });
 
 resetButton.addEventListener("click", function() {
+    this.textContent = "New colors";
     //generate all new colors
     colors = generateRandomColors(numberOfSquares);
     //pick a new random color from array
     pickedColor = pickColor();
     //change colorDisplay to match picked color 
     colorDisplay.textContent = pickedColor;
+
+    messageDisplay.textContent = "";
+
     //change colors of squares
     for (var i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
     h1.style.backgroundColor = "steelblue";
+
+
 });
 
 colorDisplay.textContent = pickedColor;
